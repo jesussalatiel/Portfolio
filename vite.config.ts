@@ -6,6 +6,7 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 import { resolve } from "path";
 
 export default defineConfig({
+    base: "/jesus-salatiel-portfolio/",
     server: {
         port: 3000,
     },
