@@ -27,7 +27,12 @@ import infiniteWordle from "@/assets/images/infinite-wordle.png";
 import setup from "@/assets/images/setup.png";
 import readme from "@/assets/images/readme.png";
 
-export const images = {
+// First, create an ImageMap type for the images object
+type ImageMap = {
+    [key: string]: string;  // or HTMLImageElement depending on your image import type
+}
+
+export const images: ImageMap = {
     photo: photo,
     photo1: photo1,
     photo2: photo2,
@@ -52,7 +57,7 @@ export const images = {
     "infinite-wordle": infiniteWordle,
     setup: setup,
     readme: readme,
-} as any;
+};
 /* ************** END of IMAGES ************** */
 interface App {
     id: number;
@@ -69,7 +74,7 @@ interface Step {
     id: number;
     title: string;
     description: string;
-    img: any;
+    img: string;
 }
 
 export const useStore = defineStore({

@@ -1,41 +1,44 @@
 {
-    "name": "hicaku",
-    "version": "0.0.0",
-    "scripts": {
-        "dev": "vite",
-        "build": "vue-tsc --noEmit && vite build",
-        "test:unit": "vitest --environment jsdom",
-        "typecheck": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
-        "lint": "eslint . --fix",
-        "prettier": "npx prettier . --write"
-    },
-    "dependencies": {
-        "pinia": "^2.3.0",
-        "vue": "^3.5.13"
-    },
-    "devDependencies": {
-        "@eslint/js": "^9.18.0",
-        "@rushstack/eslint-patch": "^1.10.5",
-        "@types/jsdom": "^21.1.7",
-        "@types/node": "^22.10.5",
-        "@vitejs/plugin-vue": "^5.2.1",
-        "@vue/eslint-config-typescript": "^14.2.0",
-        "@vue/test-utils": "^2.4.6",
-        "@vue/tsconfig": "^0.7.0",
-        "eslint": "^9.18.0",
-        "eslint-config-prettier": "^9.1.0",
-        "eslint-plugin-cypress": "^4.1.0",
-        "eslint-plugin-vue": "^9.32.0",
-        "globals": "^15.14.0",
-        "jsdom": "^26.0.0",
-        "less": "^4.2.1",
-        "less-loader": "^12.2.0",
-        "prettier": "3.4.2",
-        "start-server-and-test": "^2.0.9",
-        "typescript": "^5.7.3",
-        "typescript-eslint": "^8.19.1",
-        "vite": "^6.0.7",
-        "vitest": "^2.1.8",
-        "vue-tsc": "^2.2.0"
-    }
+  "name": "hicaku",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "test:unit": "vitest --environment jsdom",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
+    "test": "echo ''",
+    "lint": "eslint . --fix",
+    "prettier": "npx prettier . --write",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "pinia": "^2.3.0",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@rushstack/eslint-patch": "^1.10.5",
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^22.10.5",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/eslint-config-typescript": "^14.2.0",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/tsconfig": "^0.7.0",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-cypress": "^4.1.0",
+    "eslint-plugin-vue": "^9.32.0",
+    "globals": "^15.14.0",
+    "husky": "^9.1.7",
+    "jsdom": "^26.0.0",
+    "less": "^4.2.1",
+    "less-loader": "^12.2.0",
+    "prettier": "3.4.2",
+    "start-server-and-test": "^2.0.9",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.19.1",
+    "vite": "^6.0.7",
+    "vitest": "^2.1.8",
+    "vue-tsc": "^2.2.0"
+  }
 }
