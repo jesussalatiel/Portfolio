@@ -1,0 +1,24 @@
+{
+    "extends": "@vue/tsconfig/tsconfig.json",
+    "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+    "compilerOptions": {
+        "target": "Esnext",
+        "module": "Esnext",
+        "strict": true,
+        "jsx": "preserve",
+        "importHelpers": true,
+        "moduleResolution": "Node",
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"]
+        },
+        "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+        "verbatimModuleSyntax": true,
+        "ignoreDeprecations": "5.0"
+    }
+}

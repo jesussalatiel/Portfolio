@@ -1,0 +1,150 @@
+[
+    {
+        "id": 1,
+        "name": "README",
+        "extention": "txt",
+        "icon": "readme",
+        "type": "text",
+        "isOnStartMenu": true,
+        "sortApp": -1
+    },
+    {
+        "id": 2,
+        "name": "SETUP",
+        "extention": "exe",
+        "icon": "setup",
+        "type": "setup",
+        "isOnStartMenu": true,
+        "sortApp": -1
+    },
+    {
+        "id": 3,
+        "name": "Wordle",
+        "extention": "exe",
+        "icon": "infinite-wordle",
+        "type": "app",
+        "url": "https://www.google.com",
+        "isOnStartMenu": true,
+        "sortApp": 1
+    },
+    {
+        "id": 4,
+        "name": "Hibu",
+        "extention": "exe",
+        "icon": "hibu",
+        "type": "project",
+        "url": "https://www.youtube.com/",
+        "sortApp": 6
+    },
+    {
+        "id": 5,
+        "name": "Earthquakes",
+        "extention": "exe",
+        "icon": "earthquakes",
+        "type": "project",
+        "url": "https://www.youtube.com/",
+        "sortApp": 5
+    },
+    {
+        "id": 7,
+        "name": "Calculator",
+        "extention": "exe",
+        "icon": "calculator",
+        "type": "project",
+        "url": "https://calculator.hicaku.com/",
+        "isOnStartMenu": true,
+        "sortApp": 7
+    },
+    {
+        "id": 8,
+        "name": "Tictactoe",
+        "extention": "exe",
+        "icon": "tictactoe",
+        "type": "project",
+        "url": "https://tictactoe.hicaku.com/",
+        "isOnStartMenu": true,
+        "sortApp": 8
+    },
+    {
+        "id": 9,
+        "name": "Photographs",
+        "icon": "folder",
+        "type": "folder",
+        "children": [
+            {
+                "id": 10,
+                "name": "photo1",
+                "extention": "jpg",
+                "icon": "photo1",
+                "type": "photo"
+            },
+            {
+                "id": 11,
+                "name": "photo2",
+                "extention": "jpg",
+                "icon": "photo2",
+                "type": "photo"
+            },
+            {
+                "id": 12,
+                "name": "photo3",
+                "extention": "jpg",
+                "icon": "photo3",
+                "type": "photo"
+            },
+            {
+                "id": 13,
+                "name": "photo4",
+                "extention": "jpg",
+                "icon": "photo4",
+                "type": "photo"
+            },
+            {
+                "id": 16,
+                "name": "photo5",
+                "extention": "jpg",
+                "icon": "photo5",
+                "type": "photo"
+            }
+        ]
+    },
+
+    {
+        "id": 14,
+        "name": "GitHub",
+        "extention": "app",
+        "icon": "github",
+        "type": "app",
+        "url": "https://github.com/Spencehiko",
+        "isOnStartMenu": true
+    },
+    {
+        "id": 15,
+        "name": "LinkedIn",
+        "extention": "app",
+        "icon": "linkedin",
+        "type": "app",
+        "url": "https://www.linkedin.com/in/hikmet-can-kufteoglu/",
+        "isOnStartMenu": true
+    },
+    {
+        "id": 16,
+        "name": "Hikotify",
+        "extention": "exe",
+        "icon": "hikotify",
+        "type": "project",
+        "url": "https://hikotify.hicaku.com/",
+        "isOnStartMenu": true,
+        "sortApp": 2
+    },
+    {
+        "id": 17,
+        "name": "CVGenerate",
+        "extention": "exe",
+        "icon": "cv",
+        "type": "project",
+        "url": "https://cv.hicaku.com/",
+        "isOnStartMenu": true,
+        "sortApp": 3
+    }
+]

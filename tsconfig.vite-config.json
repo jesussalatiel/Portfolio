@@ -1,0 +1,10 @@
+{
+    "extends": "@vue/tsconfig/tsconfig.json",
+    "include": ["vite.config.*"],
+    "compilerOptions": {
+        "composite": true,
+        "types": ["node", "vitest"],
+        "verbatimModuleSyntax": true,
+        "ignoreDeprecations": "5.0"
+    }
+}
