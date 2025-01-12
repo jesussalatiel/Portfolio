@@ -6,9 +6,10 @@
         "build": "vue-tsc --noEmit && vite build",
         "test:unit": "vitest --environment jsdom",
         "typecheck": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
-        "lint": "eslint . --fix",
+        "lint": "eslint . --ignore-pattern 'dist/*'",
         "prettier": "npx prettier . --write",
-        "prepare": "husky"
+        "prepare": "husky",
+        "commitlint": "commitlint --edit"
     },
     "dependencies": {
         "pinia": "^2.3.0",
@@ -42,5 +43,10 @@
         "vite": "^6.0.7",
         "vitest": "^2.1.8",
         "vue-tsc": "^2.2.0"
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
     }
 }

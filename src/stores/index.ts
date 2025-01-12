@@ -29,8 +29,8 @@ import readme from "@/assets/images/readme.png";
 
 // First, create an ImageMap type for the images object
 type ImageMap = {
-    [key: string]: string;  // or HTMLImageElement depending on your image import type
-}
+    [key: string]: string; // or HTMLImageElement depending on your image import type
+};
 
 export const images: ImageMap = {
     photo: photo,
