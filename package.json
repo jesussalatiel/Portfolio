@@ -6,7 +6,7 @@
     "build": "vue-tsc --noEmit && vite build",
     "test:unit": "vitest --environment jsdom",
     "typecheck": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
-    "test": "echo ''",
+    "test": "",
     "lint": "eslint . --fix",
     "prettier": "npx prettier . --write",
     "prepare": "husky"
