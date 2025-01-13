@@ -4,51 +4,64 @@ on:
     push:
         branches:
             - master
+    workflow_dispatch: # Allow manual triggers
+
+env:
+    NODE_VERSION: "lts/*"
+    BUILD_DIR: ./dist
 
 jobs:
     deploy:
         runs-on: ubuntu-latest
 
         steps:
-            # 1. Clonar el repositorio
+            # 1. Clone the repository
             - name: Checkout code
               uses: actions/checkout@v4
 
-            # 2. Configurar Node.js
+            # 2. Cache Node.js dependencies
+            - name: Cache Node.js dependencies
+              uses: actions/cache@v4
+              with:
+                  path: ~/.npm
+                  key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+                  restore-keys: |
+                      ${{ runner.os }}-node-
+
+            # 3. Set up Node.js
             - name: Set up Node.js
               uses: actions/setup-node@v4
               with:
-                  node-version: "lts/*"
+                  node-version: ${{ env.NODE_VERSION }}
 
-            # 3. Instalar dependencias
+            # 4. Install dependencies
             - name: Install dependencies
               run: npm install
 
-            # 4. Construir el proyecto
+            # 5. Build the project
             - name: Build project
               run: npm run build
 
-            # 5. Desplegar en GitHub Pages
+            # 6. Deploy to GitHub Pages
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-github-pages@v3.1.12
-
               with:
-                  github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # Usa GITHUB_TOKEN para repositorios públicos
-                  publish_dir: ./dist
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ${{ env.BUILD_DIR }}
 
-            # 6. Opcional: Instalar navegadores para Playwright
+            # 7. Optional: Install Playwright Browsers
             - name: Install Playwright Browsers
               run: npx playwright install --with-deps
 
-            # 7. Opcional: Ejecutar pruebas con Playwright
+            # 8. Optional: Run Playwright tests
             - name: Run Playwright tests
               run: npx playwright test
 
-            # 8. Opcional: Subir reporte de Playwright como artefacto
+            # 9. Optional: Upload Playwright report as an artifact
             - name: Upload Playwright report
               if: ${{ always() }}
               uses: actions/upload-artifact@v4
               with:
                   name: playwright-report
                   path: playwright-report/
-                  retention-days: 30
+                  retention-days: 7
