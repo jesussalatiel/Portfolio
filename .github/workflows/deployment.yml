@@ -51,7 +51,7 @@ jobs:
 
             # 7. Optional: Install Playwright Browsers
             - name: Install Playwright Browsers
-              run: npx playwright install --with-deps
+              run: npx playwright install chromium
 
             # 8. Optional: Run Playwright tests
             - name: Run Playwright tests
