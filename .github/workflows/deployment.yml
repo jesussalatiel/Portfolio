@@ -46,8 +46,8 @@ jobs:
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-github-pages@v3.1.12
               with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ${{ env.BUILD_DIR }}
+                  github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+                  publish_dir: ./dist
 
             # 7. Optional: Install Playwright Browsers
             - name: Install Playwright Browsers
