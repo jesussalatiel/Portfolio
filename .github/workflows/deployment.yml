@@ -55,7 +55,7 @@ jobs:
 
             # 8. Optional: Run Playwright tests
             - name: Run Playwright tests
-              run: npx playwright test
+              run: npm run test:ci
 
             # 9. Optional: Upload Playwright report as an artifact
             - name: Upload Playwright report

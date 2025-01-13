@@ -5,6 +5,7 @@
         "dev": "vite",
         "build": "vue-tsc --noEmit && vite build",
         "deploy": "gh-pages -d dist",
+        "test:ci": "npx playwright test",
         "test:unit": "vitest --environment jsdom",
         "typecheck": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
         "lint": "eslint . --ignore-pattern 'dist/*'",
