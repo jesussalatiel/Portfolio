@@ -1,4 +1,4 @@
-# **Portfolio Template** 🛠️
+# **Portfolio Project** 🛠️
 
 _Hi! In this project, I’m building a portfolio/blog app using Vue, TypeScript, Pinia, and Vite, to demonstrate my skills in software development._
 
@@ -19,8 +19,6 @@ _Hi! In this project, I’m building a portfolio/blog app using Vue, TypeScript,
 ---
 
 ## **Installation** 🚀
-
-_Follow these steps to set up the project on your local machine._
 
 1. Clone the repository:
 
@@ -95,7 +93,7 @@ _Commonly used scripts defined in `package.json`._
 
 ## **Deployment** 🌍
 
-_Steps to deploy the project._
+_The publishing process is fully automated using GitHub Actions workflows._
 
 - Deploy to GitHub Pages:
 
@@ -113,18 +111,16 @@ _Steps to deploy the project._
 
 ## **Technologies** 🛠️
 
-_List the key technologies and frameworks used._
-
 - [Vite](https://vitejs.dev/) - Fast development server and bundler.
 - [Playwright](https://playwright.dev/) - End-to-end testing.
 - [TypeScript](https://www.typescriptlang.org/) - Typed JavaScript.
 - [GitHub Actions](https://github.com/features/actions) - CI/CD pipeline.
+- [Lint Commit](https://commitlint.js.org/) - Helps your team adhere to a commit convention.
+- [Prettier](https://prettier.io/) - Prettier is an opinionated code formatter.
 
 ---
 
 ## **Contributing** 🤝
-
-_Describe how others can contribute to the project._
 
 1. Fork the repository.
 2. Create a new branch:
