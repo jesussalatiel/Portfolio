@@ -1,19 +1,159 @@
-# Portfolio
+# **Portfolio Template** 🛠️
 
-**Live Demo: [Portfolio - HiCaKu](https://hicaku.com/)**
+_Hi! In this project, I’m building a portfolio/blog app using Vue, TypeScript, Pinia, and Vite, to demonstrate my skills in software development._
 
-Hi! In this project I try to develop a calculator app with **Vue, Typescript, Pinia, Vite**.
+---
 
-If you want to try it out you can simply click **Code > Copy Icon** and go to your Terminal/Cmd etc.
+## **Table of Contents** 📖
 
-    git clone THIS_REPOSITORY_LINK
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Scripts](#scripts)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Technologies](#technologies)
+- [Contributing](#contributing)
+- [License](#license)
 
-After cloning is finished, you **must** install the npm in order to run.
+---
 
+## **Installation** 🚀
+
+_Follow these steps to set up the project on your local machine._
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/<your-username>/<your-repo>.git
+    cd <your-repo>
+    ```
+
+2. Install dependencies:
+    ```bash
     npm install
+    ```
 
-Then, you are ready to give it a shot! Just type
+---
 
-    npm run serve
+## **Usage** 🧑‍💻
 
-and you will see the project in your browser!
+_How to use or run the project locally._
+
+- Start the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+- Open the project in your browser:
+    ```
+    http://localhost:3000/jesus-salatiel-portfolio/
+    ```
+
+---
+
+## **Features** ✨
+
+- Downloads: Download CV.
+- Interactive Mode: Responsive design.
+- Blog: Post articles/blogs.
+
+---
+
+## **Scripts** 📜
+
+_Commonly used scripts defined in `package.json`._
+
+| Script             | Description                           |
+| ------------------ | ------------------------------------- |
+| `npm run dev`      | Starts the development server.        |
+| `npm run build`    | Builds the project for production.    |
+| `npm run test:ci`  | Runs automated tests with Playwright. |
+| `npm run prettier` | Formats the code using Prettier.      |
+
+---
+
+## **Testing** ✅
+
+- Install Playwright browsers (if not already installed):
+
+    ```bash
+    npx playwright install
+    ```
+
+- Run all tests:
+
+    ```bash
+    npm run test:ci
+    ```
+
+- View the test report:
+  The test results will be available in the `playwright-report` folder.
+
+---
+
+## **Deployment** 🌍
+
+_Steps to deploy the project._
+
+- Deploy to GitHub Pages:
+
+    ```bash
+    git commit -m "chore(workflow): deploy to github pages"
+    git push origin master
+    ```
+
+- Access your deployed site at:
+    ```
+    https://<your-username>.github.io/<your-repo>/
+    ```
+
+---
+
+## **Technologies** 🛠️
+
+_List the key technologies and frameworks used._
+
+- [Vite](https://vitejs.dev/) - Fast development server and bundler.
+- [Playwright](https://playwright.dev/) - End-to-end testing.
+- [TypeScript](https://www.typescriptlang.org/) - Typed JavaScript.
+- [GitHub Actions](https://github.com/features/actions) - CI/CD pipeline.
+
+---
+
+## **Contributing** 🤝
+
+_Describe how others can contribute to the project._
+
+1. Fork the repository.
+2. Create a new branch:
+    ```bash
+    git checkout -b feature/<feature-name>
+    ```
+3. Commit your changes:
+    ```bash
+    git commit -m "Add feature: <feature-name>"
+    ```
+4. Push to the branch:
+    ```bash
+    git push origin feature/<feature-name>
+    ```
+5. Open a pull request.
+
+---
+
+## **License** 📜
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## **Contact** 📬
+
+For any inquiries or support, feel free to contact me at:
+
+- **Email**: [jesussalatiel@hotmail.com](mailto:jesussalatiel@hotmail.com)
+- **GitHub**: [github.com/jesussalatiel](https://github.com/jesussalatiel)
+
+---
