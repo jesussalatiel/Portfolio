@@ -3,7 +3,7 @@ name: Deploy Vite App to GitHub Pages
 on:
     push:
         branches:
-            - main # Cambia a "master" si esa es tu rama principal
+            - master
 
 jobs:
     deploy:
@@ -32,7 +32,7 @@ jobs:
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
               with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }} # Usa GITHUB_TOKEN para repositorios públicos
+                  github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # Usa GITHUB_TOKEN para repositorios públicos
                   publish_dir: ./dist
 
             # 6. Opcional: Instalar navegadores para Playwright
