@@ -10,6 +10,7 @@
     const { program, isMinimized, isFullscreen } = storeToRefs(store);
     const { toggleMinimized, closeProgram, toggleFullscreen } = store;
 </script>
+
 <template>
     <div class="program-window" v-if="program?.type" v-show="!isMinimized" :class="{ fullscreen: isFullscreen }">
         <div class="program-window__header">
@@ -37,20 +38,17 @@
         <FolderWindow v-if="program.type === 'folder'" />
         <WelcomeWindow v-if="program.type === 'welcome'" />
         <div class="text-editor" v-if="program.type === 'text'">
-            <h1>Hello World!</h1>
-            <p>This website exists for you to get to know me.</p>
+            <h1>Hello There!</h1>
+            <p>This website is your gateway to discovering who I am and what I bring to the table!</p>
             <br />
             <p>
-                If you want to download my CV, you can click to SETUP.exe and when the setup finishes, you will be able
-                to download my CV.
+                Want to grab my CV? Just click on SETUP.exe! Once the setup is complete, you’ll be ready to download it
+                and dive into my journey!
             </p>
             <br />
-            <p>
-                You can view my websites by clicking the logos on the desktop. Also I have added 4 photographs that I
-                took.
-            </p>
+
             <br />
-            <p style="text-align: right">- Hikmet</p>
+            <p style="text-align: right">- Jesús Salatiel</p>
         </div>
     </div>
 </template>

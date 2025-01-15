@@ -1,18 +1,10 @@
 import { defineStore } from "pinia";
 import Apps from "@/datas/apps.json";
 
-/* ************** IMAGES ************** */
-import photo from "@/assets/images/photo.png";
-import photo1 from "@/assets/images/photo1.jpg";
-import photo2 from "@/assets/images/photo2.jpg";
-import photo3 from "@/assets/images/photo3.jpg";
-import photo4 from "@/assets/images/photo4.jpg";
-import photo5 from "@/assets/images/photo5.jpg";
 import step1 from "@/assets/images/step1.png";
 import step2 from "@/assets/images/step2.png";
 import step3 from "@/assets/images/step3.png";
 import step4 from "@/assets/images/step4.png";
-import solitaire from "@/assets/images/solitaire.png";
 import cv from "@/assets/images/cv.png";
 import nba from "@/assets/images/nba.png";
 import hikotify from "@/assets/images/hikotify.png";
@@ -23,27 +15,18 @@ import tictactoe from "@/assets/images/tictactoe.png";
 import calculator from "@/assets/images/calculator.png";
 import earthquakes from "@/assets/images/earthquakes.png";
 import hibu from "@/assets/images/hibu.png";
-import infiniteWordle from "@/assets/images/infinite-wordle.png";
 import setup from "@/assets/images/setup.png";
 import readme from "@/assets/images/readme.png";
 
-// First, create an ImageMap type for the images object
 type ImageMap = {
-    [key: string]: string; // or HTMLImageElement depending on your image import type
+    [key: string]: string;
 };
 
 export const images: ImageMap = {
-    photo: photo,
-    photo1: photo1,
-    photo2: photo2,
-    photo3: photo3,
-    photo4: photo4,
-    photo5: photo5,
     step1: step1,
     step2: step2,
     step3: step3,
     step4: step4,
-    solitaire: solitaire,
     cv: cv,
     nba: nba,
     hikotify: hikotify,
@@ -54,11 +37,10 @@ export const images: ImageMap = {
     calculator: calculator,
     earthquakes: earthquakes,
     hibu: hibu,
-    "infinite-wordle": infiniteWordle,
     setup: setup,
     readme: readme,
 };
-/* ************** END of IMAGES ************** */
+
 interface App {
     id: number;
     name: string;
@@ -70,39 +52,66 @@ interface App {
     isOnStartMenu?: boolean;
     sortApp?: number;
 }
+
 interface Step {
     id: number;
     title: string;
-    description: string;
-    img: string;
+    description: string | string[];
+    img?: string;
 }
 
-export const useStore = defineStore({
-    id: "store",
+export const useStore = defineStore("store", {
     state: () => ({
         stepNum: 1,
         steps: [
             {
                 id: 1,
                 title: "Welcome!",
-                description: "At the of setup wizard, you will be able to see my CV.",
-                img: "step1",
+                description:
+                    "Complete the setup wizard to unlock access to my CV and explore everything I have to offer!",
             },
             {
                 id: 2,
                 title: "Employment History",
-                description: "In short, you can see my employment history.",
-                img: "step2",
+                description: [
+                    "Globant/Zoox, Guadalajara, México (Nov 2022 – Present).",
+                    "Globant/IHFintech, Guadalajara, México (July 2022 – Nov 2024).",
+                    "Globant/Cloud Inventory, Guadalajara, México (July 2021 – July 2022).",
+                    "Globant/Global Bank, Guadalajara, México (May 2021 – July 2021).",
+                    "Softtek/UPS, Aguascalientes, México (Sep 2019 – Apr 2021).",
+                ],
             },
-            { id: 3, title: "Technical Skills", description: "My technical skills can be seen here.", img: "step3" },
-            { id: 4, title: "Hobbies", description: "My hobbies are listed here.", img: "step4" },
+            {
+                id: 3,
+                title: "Technical Skills",
+                description: [
+                    "Programming Languages: Java, Python, Typescript, C#, Kotlin.",
+                    "CI/CD: AWS, Azure, Jenkins, GitHub Actions, Docker.",
+                    "Test Management Tools: Jira, XRay, TestRails.",
+                    "Automation Tools: Selenium, Playwright, Cypress, Appium, Espresso, XCUI.",
+                    "Performance Testing: k6.",
+                    "API Testing: Rest Assured, RestSharp, Postman.",
+                    "Databases: MySQL, DynamoDB, Oracle, Microsoft SQL Server.",
+                    "Testing Approaches: Cucumber, Test Design, Execution, and Reporting.",
+                ],
+            },
+            {
+                id: 4,
+                title: "Hobbies",
+                description: [
+                    "I enjoy staying active and going to the gym regularly.",
+                    "I appreciate relaxing moments, and occasionally, I enjoy a good beer.",
+                    "I have a deep passion for exploring and embracing technological innovations.",
+                    "I strive to contribute positively to the growth and betterment of the world.",
+                ],
+            },
         ],
         searchQuery: "",
         apps: Apps as App[],
         program: {} as App,
         folderPrograms: [] as App[] | undefined,
-        currentTime: new Date().toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" }),
-        currentDate: new Date().toLocaleDateString("en-GB"),
+        currentTime: new Date().toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit" }),
+        currentDate: new Date().toLocaleDateString("en-US"),
         recentApps: [] as App[],
         isShown: true,
         isMinimized: false,
@@ -129,7 +138,7 @@ export const useStore = defineStore({
     },
     actions: {
         getCurrentTime() {
-            this.currentTime = new Date().toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
+            this.currentTime = new Date().toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit" });
         },
         openProgram(app: App) {
             this.isStartMenuOpen = false;
@@ -193,7 +202,7 @@ export const useStore = defineStore({
         downloadCV() {
             const link = document.createElement("a");
             link.href = "./cv.pdf";
-            link.download = "cv.pdf";
+            link.download = "jesus_salatiel_sdet.pdf";
             link.click();
         },
     },

@@ -36,7 +36,7 @@
     </div>
     <div class="start-menu" v-if="isStartMenuOpen">
         <div class="start-menu__header">
-            <h3 class="start-menu__header-title">Visitor</h3>
+            <h3 class="start-menu__header-title">Portfolio</h3>
         </div>
         <div class="start-menu__content">
             <div
@@ -50,7 +50,7 @@
             </div>
         </div>
 
-        <h3 v-if="recentApps.length" class="start-menu__recent-title">Recent Apps</h3>
+        <!-- <h3 v-if="recentApps.length" class="start-menu__recent-title">Recent Apps</h3> -->
         <div v-if="recentApps.length" class="start-menu__content">
             <div class="start-menu__content-item" v-for="app in recentApps" :key="app.id" @click="openProgram(app)">
                 <img class="start-menu__content-item-icon" :src="images[app.icon]" :alt="app.name" />
@@ -59,6 +59,7 @@
         </div>
     </div>
 </template>
+
 <style lang="less" scoped>
     .navbar {
         position: absolute;

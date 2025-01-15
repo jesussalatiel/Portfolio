@@ -13,7 +13,7 @@
         if (localStorage.getItem("hasCodeRunBefore") === null) {
             openProgram({
                 id: -1,
-                name: "Welcome",
+                name: "Welcome to my corner of the web!",
                 extention: "",
                 icon: "",
                 type: "welcome",

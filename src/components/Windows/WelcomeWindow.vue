@@ -37,9 +37,9 @@
             </div>
         </div>
         <div class="welcome-text" v-if="isAllProgressCompleted">
-            <h2>>> Welcome to the HikOS 22!</h2>
-            <h4>>> You can simply download my resume,</h4>
-            <h4>>> Or close this window and start to explore my works!</h4>
+            <h2>→ Welcome to my digital portfolio!</h2>
+            <h4>→ Feel free to download my resume with just a click,</h4>
+            <h4>→ Or close this window and dive into exploring my projects!</h4>
             <div class="download">
                 <button class="download-button" @click="downloadCV">Download CV</button>
             </div>

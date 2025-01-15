@@ -22,7 +22,7 @@
                     <img src="@/assets/images/pdf.png" />
                 </div>
                 <div class="desktop-apps__apps-item-name">
-                    <p>Hola.pdf</p>
+                    <p>Jesus_Salatiel_SDET.pdf</p>
                 </div>
             </div>
         </div>
