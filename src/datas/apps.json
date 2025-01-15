@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "README",
-        "extention": "txt",
+        "extention": "",
         "icon": "readme",
         "type": "text",
         "isOnStartMenu": true,
@@ -11,7 +11,7 @@
     {
         "id": 2,
         "name": "SETUP",
-        "extention": "exe",
+        "extention": "",
         "icon": "setup",
         "type": "setup",
         "isOnStartMenu": true,
@@ -20,7 +20,7 @@
     {
         "id": 3,
         "name": "GitHub",
-        "extention": "app",
+        "extention": "",
         "icon": "github",
         "type": "app",
         "url": "https://github.com/jesussalatiel",
@@ -30,7 +30,7 @@
     {
         "id": 4,
         "name": "LinkedIn",
-        "extention": "app",
+        "extention": "",
         "icon": "linkedin",
         "type": "app",
         "url": "https://www.linkedin.com/in/jesussalatiel/",
@@ -40,7 +40,7 @@
     {
         "id": 5,
         "name": "CVGenerate",
-        "extention": "pdf",
+        "extention": "",
         "icon": "cv",
         "type": "app",
         "url": "./cv.pdf",
